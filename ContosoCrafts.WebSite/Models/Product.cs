@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Id { get; set; }
         public string Maker { get; set; }
 
-        [JsonPropertyName("img")]
+        [JsonPropertyName("img")]   //키 이름과 메소드명을 서로 다르게 지을 경우 매핑
         public string Image { get; set; }
 
         public string Url { get; set; }
@@ -19,6 +20,6 @@ namespace ContosoCrafts.WebSite.Models
         public string Dexcription { get; set; }
         public int[] Ratings { get; set; }
 
-        public override ToString() { }
+        public override string ToString() => JsonSerializer.Serialize<Product>(this);
     }
 }

@@ -1,2 +1,2 @@
 # ASP.NET
-study ASP.NET 5.0 Web Application MVC, Visual Studio 2019
+study ASP.NET Core 5.0 MVC, Visual Studio 2019
